@@ -1,4 +1,4 @@
-# Quotes App
+# Random Quotes App
 
 This simple web application displays a random quote each time you click a button or press "Enter". Quotes are fetched from a local API stored in project files and dynamically displayed on the page.
 
@@ -22,13 +22,13 @@ git clone https://github.com/your-username/your-repo.git
 ### 2. Navigate to the project folder:
 
 ```bash
-cd quotes_app
+cd Random_Quotes_App
 ```
 
 ### 3. Start the server:
 
 ```bash
-    node server.js
+node server.js
 ```
 
 ### 4. Open your browser and go to:
