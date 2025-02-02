@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quotes app</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
-</head>
-<body>
-    Hello!
-</body>
+  </head>
+  <body>
+    <div id="quote-container" class="quote-container">
+      <div class="single-quote">
+        <q id="quote"></q>
+        <br />
+        <cite id="author"></cite>
+      </div>
+      <div class="button-container">
+        <button id="next-quote-btn">Next quote</button>
+      </div>
+    </div>
+  </body>
 </html>
