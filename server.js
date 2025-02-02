@@ -5,7 +5,8 @@ const {
   getQuote,
   getRandomQuote,
 } = require("./controllers/quoteControler");
-const { log } = require("console");
+
+const { serveStaticFile } = require("./util/staticServer");
 
 const PORT = 8080;
 const API_CONTENT_TYPE = { "Content-Type": "application/json" };
@@ -48,6 +49,8 @@ const server = http.createServer(async function (req, res) {
     }
 
     res.end(JSON.stringify(quote));
+  } else {
+    serveStaticFile(req, res);
   }
 });
 
