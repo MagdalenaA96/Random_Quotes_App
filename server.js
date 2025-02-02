@@ -24,6 +24,17 @@ const server = http.createServer(async function (req, res) {
     }
 
     res.end(JSON.stringify(quotes));
+  } else if (req.url === "/api/quotes/random" && req.method === "GET") {
+    let quote = await getRandomQuote();
+
+    if (quote) {
+      res.writeHead(200, API_CONTENT_TYPE);
+    } else {
+      res.writeHead(404, API_CONTENT_TYPE);
+      quote = { message: "Quote not found" };
+    }
+
+    res.end(JSON.stringify(quote));
   }
 });
 
